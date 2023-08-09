@@ -1,0 +1,44 @@
+body{
+    background-color: darkgray;
+}
+
+h1, h2, h3, h4, h5, p {
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Section */
+.navbar{
+    background-color: darkslategray;
+}
+
+/* -------------------------------------------- */
+/* Index Page */
+/* cover page */
+
+.cover-hero{
+    background-color: darkslategray;
+    width: auto;
+    height: 95vh;
+}
+.carousel-item{
+    max-height: 95vh;
+}
+
+/* about us section - home page */
+.about-us{
+    height: 100vh;
+    width: auto;
+    background-color: lightslategray;
+}
+
+.about{
+    margin-top: 25vh;
+
+}
+
+.image-home {
+    background-color: darkslategrey;
+    width: 450px;
+    height: 500px;
+}
