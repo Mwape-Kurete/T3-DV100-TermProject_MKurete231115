@@ -16,10 +16,10 @@
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/assets/icons-and-logos/logo.svg" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top">
-                Sail Africa
+            <a class="navbar-brand" href="#" class="">
+                <img src="/assets/icons-and-logos/logo.svg" alt="Logo" width="50" height="50"
+                    class="d-inline-block align-text-top">
+                <h1>Sail Africa</h1>
             </a>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -29,195 +29,91 @@
             </ul>
 
             <a class="navbar-brand" href="#">
-                <img src="/assets/icons-and-logos/bag-heart-fill.svg" alt="checkout" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="/assets/icons-and-logos/bag-heart-fill.svg" alt="checkout" width="30" height="24"
+                    class="d-inline-block align-text-top">
             </a>
         </div>
     </nav>
     <header>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary hero">
             <div class="col-md-6 p-lg-5 mx-auto my-5">
-                <h1 class="display-3 fw-bold">SAIL AFRICA</h1>
+                <h1 class="display-3 fw-bold">Sail Africa</h1>
                 <h3 class="fw-normal text-muted mb-3">Explore our trips</h3>
-                <!--<div class="d-flex gap-3 justify-content-center lead fw-normal">
-                    <a class="icon-link" href="#">
-                        Learn more
-                        <svg class="bi">
-                            <use xlink:href="#chevron-right"></use>
-                        </svg>
-                    </a>
-                    <a class="icon-link" href="#">
-                        Buy
-                        <svg class="bi">
-                            <use xlink:href="#chevron-right"></use>
-                        </svg>
-                    </a>
-                </div>-->
             </div>
         </div>
     </header>
 
     <section class="trips">
+
         <div class="container">
+            <!-- Filter -->
+            <div class="row">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">All</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2"><i class="bi bi-cash-stack"></i> All
+                        inclusive</label>
+                </div>
+            </div>
             <!-- first row -->
             <div class="row trips-row">
                 <div class="col-12">
-                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center">
-                        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                            <div class="my-3 py-3">
-                                <h2 class="display-5">Gabon Destination</h2>
-                                <p class="lead">Add Gabon to your cruise package</p>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/assets/images/trips/Warrior 5 (1910) - Gabon - LastDodo.jpeg" class="card-img-top" alt="Gabon">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Gabon Coast</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">An item</li>
-                                        <li class="list-group-item">A second item</li>
-                                        <li class="list-group-item">A third item</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link">add to cart</a>
-                                        <a href="#" class="card-link">add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                            <div class="my-3 p-3">
-                                <h2 class="display-5">Egypt Destination</h2>
-                                <p class="lead">Add Egypt to your cruise package</p>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/assets/images/trips/Egyptian Themed Stamps - Page 10 - Stamp Community Forum.jpeg" class="card-img-top" alt="Egypt">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Egypt</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">An item</li>
-                                        <li class="list-group-item">A second item</li>
-                                        <li class="list-group-item">A third item</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link">Add to cart</a>
-                                        <a href="#" class="card-link">add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
+
+                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center" id="tripsContainer">
+
+                        <!-- append trips here -->
+
                     </div>
-                </div>
-            </div>
-            <!-- second row -->
-            <div class="row trips-row">
-                <div class="col-12">
-                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center">
-                        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                            <div class="my-3 py-3">
-                                <h2 class="display-5">Another headline</h2>
-                                <p class="lead">And an even wittier subheading.</p>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/assets/images/trips/Share with others your Engraved Stamp Beauties - Page 21 - STAMPBOARDS - Postage Stamp Chat Board and Stamp Forum.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">An item</li>
-                                        <li class="list-group-item">A second item</li>
-                                        <li class="list-group-item">A third item</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                            <div class="my-3 p-3">
-                                <h2 class="display-5">Another headline</h2>
-                                <p class="lead">And an even wittier subheading.</p>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/assets/images/trips/Share with others your Engraved Stamp Beauties - Page 63 - STAMPBOARDS - Postage Stamp Chat Board and Stamp Forum.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">An item</li>
-                                        <li class="list-group-item">A second item</li>
-                                        <li class="list-group-item">A third item</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- third row -->
-            <div class="row trips-row">
-                <div class="col-12">
-                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center">
-                        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                            <div class="my-3 py-3">
-                                <h2 class="display-5">Another headline</h2>
-                                <p class="lead">And an even wittier subheading.</p>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/assets/images/trips/Share with others your Engraved Stamp Beauties - Page 63 - STAMPBOARDS - Postage Stamp Chat Board and Stamp Forum.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">An item</li>
-                                        <li class="list-group-item">A second item</li>
-                                        <li class="list-group-item">A third item</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
+
+                    <!-- Individual Package START -->
+                    <template id="tripsCardTemplate">
+                        <div class="col-6">
+                            <div
+                                class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden trip-package">
+                                <div class="my-3 py-3 ">
+                                    <h2 class="display-5 destination-title" id="destName">Gabon Destination</h2>
+                                    <p class="lead" id="destPrice">R15000</p>
+                                    <div class="card mx-auto" style="width: 18rem; ">
+                                        <img src="/assets/images/trips/Warrior 5 (1910) - Gabon - LastDodo.jpeg"
+                                            class="card-img-top" alt="Gabon" id="destImg">
+                                        <div class="card-body">
+                                            <p class="card-text" id="destDescript">Some quick example text to build on
+                                                the card title and make
+                                                up the bulk of the card's content.</p>
+                                        </div>
+                                        <div class="list-group list-group-flush options">
+                                            <li class="list-group-item" id="packageType">
+                                                <input class="form-check-input" type="checkbox" value="all"
+                                                    id="packageType">
+                                                <label class="form-check-label" for="packageType">
+                                                    all inclusive
+                                                </label>
+                                            </li>
+                                            <li class="list-group-item" id="length"><input class="form-check-input"
+                                                    type="checkbox" value="all" id="duration">
+                                                <label class="form-check-label" for="duration">
+                                                    5 days
+                                                </label>
+                                            </li>
+                                            <li class="list-group-item" id="region"><input class="form-check-input"
+                                                    type="checkbox" value="all" id="location">
+                                                <label class="form-check-label" for="location">
+                                                    North Eastern Africa
+                                                </label>
+                                            </li>
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link">add to cart</a>
+                                            <a href="#" class="card-link">add to cart</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                            <div class="my-3 p-3">
-                                <h2 class="display-5">Another headline</h2>
-                                <p class="lead">And an even wittier subheading.</p>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/assets/images/trips/Masks On Stamps - Page 2 - Stamp Community Forum.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">An item</li>
-                                        <li class="list-group-item">A second item</li>
-                                        <li class="list-group-item">A third item</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
+                    </template>
+                    <!-- Individual Package END -->
                 </div>
             </div>
 

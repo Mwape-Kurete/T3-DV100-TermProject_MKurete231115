@@ -1,5 +1,16 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&family=Kanit:wght@200;300&family=Rokkitt:ital,wght@0,100;1,200&family=Tangerine:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* Fonts 
+font-family: 'Flamenco', cursive; -> H2 and H3subheading font
+font-family: 'Kanit', sans-serif; -> H1 
+font-family: 'Rokkitt', serif; -> body 
+font-family: 'Tangerine', cursive; -> Logo txt
+
+*/
 body{
-    background-color: darkgray;
+    background-color: #081B28;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -7,13 +18,73 @@ h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 
-/* Nav Section */
-.navbar{
-    background-color: darkslategray;
+
+/* Fonts */
+
+.navbar-brand h1{
+    font-family: 'Tangerine', cursive;
+    padding-left: 20px;
+    padding-top: 5px;
 }
 
+h1{
+    font-family: 'Tangerine', cursive;
+    color: #B37A2F;
+    font-size: larger;
+}
+
+h3{
+    font-family: 'Flamenco', cursive;
+    color: #081B28;
+}
+/* ------------ End of fonts ----------- */
+
+
+/* Nav Section */
+.navbar-brand{
+    display: flex;
+}
+
+.navbar ul{
+    font-family: 'Flamenco', cursive;
+    color: #B37A2F;
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: -50px;
+}
+
+.navbar a{
+    color: #B37A2F; 
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: #0B2538;
+}
+
+.active{
+    color: #790A00;
+}
+
+/* END OF NAV */
+
+
 /* -------------------------------------------- */
-/* Index Page */
+/* Accord Page */
+
+.accordion-button{
+    background-color: #B37A2F;
+    color: #081B28;
+    font-family: 'Flamenco', cursive;
+    font-weight: bolder;
+}
+
+.show{
+    background-color: #0b253875;
+    color: antiquewhite;
+    font-family: 'Rokkitt', serif;
+
+}
+
 /* cover page */
 
 .cover-hero{
@@ -29,7 +100,6 @@ h1, h2, h3, h4, h5, p {
 .about-us{
     height: 100vh;
     width: auto;
-    background-color: lightslategray;
 }
 
 .about{
@@ -44,11 +114,35 @@ h1, h2, h3, h4, h5, p {
 }
 
 /* ------------------------------------------- */
+
 /* trips page */
+
 
 /* trips section */
 
 .card{
     margin-top: 15px;
     margin-left: 10%;
+    width: 700px;
+
+}
+
+.destination-title{
+    font-family: 'Tangerine', cursive;
+    color: #B37A2F;
+}
+
+.lead {
+    font-family: 'Kanit', sans-serif;
+    color: #B37A2F;
+}
+
+.card-title{
+    font-family: 'Tangerine', cursive;
+    color: #B37A2F;
+}
+
+.card-text{
+    color: #790A00;
+    font-family: 'Rokkitt', serif;
 }
