@@ -66,17 +66,55 @@ $(document).ready(function () {
 
 // ----------------------
 // load trips start
-function loadTrips(){
+function loadTrips(tripsShowing) {
 
     $("#tripsContainer").empty();
 
     // API 
 
     // Looping through arr 
-    for (let i = 0; i < arrTrips.length; i++) {
-        const trip = arrTrips[i];
+    for (let i = 0; i < tripsShowing.length; i++) {
+        const trip = tripsShowing[i];
 
         console.log(trip);
-        
+
+        // 1. 
+        $("#tripsContainer").append($("#tripsCardTemplate").html());
+
+        // 2. 
+        let currentChild = $("#tripsContainer").children().eq(i);
+
+        // 3.
+        $(currentChild).find("#destName").text(trip.destName); 
+        $(currentChild).find("#destPrice").text(trip.destPrice); 
+        $(currentChild).find(".card-img-top").attr('src', '/assets/images/trips/' + trip.destImg)
+        $(currentChild).find("#destDescript").text(trip.destDescript); 
+        $(currentChild).find("#packageType").text(trip.packageType); 
+        $(currentChild).find("#duration").text(trip.duration); 
+        $(currentChild).find("#location").text(trip.location); 
     }
+
+
+}
+
+$("input[name='btnradio']").click(function(){
+
+    appliedFilt = $(this).attr('value');
+
+    console.log(appliedFilt);
+    filterTrips();
+});
+
+function filterTrips(){
+    let filteredTripsArr = []; 
+
+    // filtering the trips 
+    if(appliedFilt){
+        filteredTripsArr = arrTrips.filter(trips => trips.packageType == appliedFilt);
+    } else {
+
+        filteredTripsArr = arrTrips;
+    }
+
+    loadTrips(filteredTripsArr);
 }

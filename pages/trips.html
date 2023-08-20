@@ -49,19 +49,22 @@
             <!-- Filter -->
             <div class="row">
                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" value="" autocomplete="off" checked>
                     <label class="btn btn-outline-primary" for="btnradio1">All</label>
 
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="all inclusive" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio2"><i class="bi bi-cash-stack"></i> All
                         inclusive</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="basic package" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio3"><i class="bi bi-cash-stack"></i> Basic Package</label>
                 </div>
             </div>
             <!-- first row -->
             <div class="row trips-row">
                 <div class="col-12">
 
-                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center" id="tripsContainer">
+                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center overflow-auto" id="tripsContainer">
 
                         <!-- append trips here -->
 
