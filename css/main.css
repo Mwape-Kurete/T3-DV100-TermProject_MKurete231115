@@ -146,3 +146,8 @@ h3{
     color: #790A00;
     font-family: 'Rokkitt', serif;
 }
+
+
+.card-img-top{
+    max-height: 473px;
+}

@@ -2,40 +2,36 @@
 // trips array start
 const arrTrips = [
     {
-        destName: "Gabon Coast",
-        destPrice: 15000,
+        txtName: "Gabon Coast",
+        txtCost: 15000,
         destImg: "image8.jpeg",
-        destDescript: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Gabons culture and cuisine",
-        packageType: "all inclusive",
-        duration: 5,
-        location: "Central Western Africa"
+        txtDescription: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Gabons culture and cuisine",
+        txtType: "all inclusive",
+        txtDuration: 5
     }, // pos 0
     {
-        destName: "Madagascar",
-        destPrice: 10000,
+        txtName: "Madagascar",
+        txtCost: 10000,
         destImg: "image7.jpeg",
-        destDescript: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Madagascars culture and cuisine",
-        packageType: "basic package",
-        duration: 3,
-        location: "North Western Africa"
+        txtDescription: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Madagascars culture and cuisine",
+        txtType: "basic package",
+        txtDuration: 3
     }, // pos 1
     {
-        destName: "Togo",
-        destPrice: 17000,
+        txtName: "Togo",
+        txtCost: 17000,
         destImg: "image6.jpeg",
-        destDescript: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Togo culture and cuisine",
-        packageType: "basic package",
-        duration: 6,
-        location: "South East Africa"
+        txtDescription: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Togo culture and cuisine",
+        txtType: "basic package",
+        txtDuration: 6
     }, // pos 2
     {
-        destName: "Nigeria",
-        destPrice: 12000,
+        txtName: "Nigeria",
+        txtCost: 12000,
         destImg: "image5.jpeg",
-        destDescript: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Togo culture and cuisine",
-        packageType: "basic package",
-        duration: 3,
-        location: "North Western Africa"
+        txtDescription: "Beautifully Tranquil, see what this part of africa has to offer. visit historical sites and famous beaaches whilst embracing Togo culture and cuisine",
+        txtType: "basic package",
+        txtDuration: 3
     } //pos3
 ];
 // trips array END
@@ -68,7 +64,7 @@ $(document).ready(function () {
 // load trips start
 function loadTrips(tripsShowing) {
 
-    $("#tripsContainer").empty();
+    $("#tripsCont").empty();
 
     // API 
 
@@ -79,19 +75,18 @@ function loadTrips(tripsShowing) {
         console.log(trip);
 
         // 1. 
-        $("#tripsContainer").append($("#tripsCardTemplate").html());
+        $("#tripsCont").append($("#tripsCardTemplate").html());
 
         // 2. 
-        let currentChild = $("#tripsContainer").children().eq(i);
+        let currentChild = $("#tripsCont").children().eq(i);
 
         // 3.
-        $(currentChild).find("#destName").text(trip.destName); 
-        $(currentChild).find("#destPrice").text(trip.destPrice); 
+        $(currentChild).find("#txtName").text(trip.txtName); 
+        $(currentChild).find("#txtCost").text(trip.destPrice); 
         $(currentChild).find(".card-img-top").attr('src', '/assets/images/trips/' + trip.destImg)
-        $(currentChild).find("#destDescript").text(trip.destDescript); 
-        $(currentChild).find("#packageType").text(trip.packageType); 
-        $(currentChild).find("#duration").text(trip.duration); 
-        $(currentChild).find("#location").text(trip.location); 
+        $(currentChild).find("#txtDescription").text(trip.txtDescription); 
+        $(currentChild).find("#txtType").text(trip.txtType); 
+        $(currentChild).find("#txtDuration").text(trip.txtDuration); 
     }
 
 
@@ -110,7 +105,7 @@ function filterTrips(){
 
     // filtering the trips 
     if(appliedFilt){
-        filteredTripsArr = arrTrips.filter(trips => trips.packageType == appliedFilt);
+        filteredTripsArr = arrTrips.filter(trips => trips.txtType == appliedFilt);
     } else {
 
         filteredTripsArr = arrTrips;
@@ -118,3 +113,18 @@ function filterTrips(){
 
     loadTrips(filteredTripsArr);
 }
+
+// HOVER / CARD EFFECTS / ANIMATIONS 
+
+$("tripsCont").on('click', '.card', function () {
+    // Toggling visibility 
+
+    $(this).find("#txtName").toggle();
+    $(this).find("#txtDescription").toggle();
+    $(this).find("#txtDuration").toggle();
+    $(this).find("#txtType").toggle();
+    $(this).find("#txtCost").toggle();
+
+    // Making sure the image fits 
+    $(this).find(".card-img-top").toggleClass("small");
+})
