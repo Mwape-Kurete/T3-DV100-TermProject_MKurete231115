@@ -10,7 +10,7 @@ font-family: 'Tangerine', cursive; -> Logo txt
 
 */
 body{
-    background-color: #081B28;
+    background-color: #946425;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -71,7 +71,7 @@ h3{
 /* -------------------------------------------- */
 /* Accord Page */
 
-.accordion-button{
+/* .accordion-button{
     background-color: #B37A2F;
     color: #081B28;
     font-family: 'Flamenco', cursive;
@@ -83,8 +83,14 @@ h3{
     color: antiquewhite;
     font-family: 'Rokkitt', serif;
 
-}
+} */
 
+.col-6 .about{
+    max-width: 50%;
+}
+.apiSection{
+    max-width: 400px;
+}
 /* cover page */
 
 .cover-hero{
@@ -150,4 +156,68 @@ h3{
 
 .card-img-top{
     max-height: 473px;
+}
+
+
+/* ------TRIPS CHECKOUT-------- */
+* Wishlist */
+
+tr:hover {
+    cursor: pointer;
+}
+
+.list-img-left {
+    width: auto;
+    height: 100px;
+    margin: auto;
+}
+
+.list-text {
+    color: rgb(36, 61, 36);
+    vertical-align: middle;
+    font-family: 'Lato', sans-serif;
+}
+
+.list-del {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.list-del-img:hover {
+    border: 2px solid rgba(183, 0, 0, 0.881);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    transition: all cubic-bezier(.08,.69,1,.26);
+
+}
+
+#remove {
+    text-align: center;
+}
+
+
+/* CHEKOUT STYLING */
+
+.checkout{
+    
+    margin-bottom: 100px;
+}
+.checkout, h2{
+    font-family: 'Flamenco', cursive;
+    color: #0B2538;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.purchase{
+    font-family: 'Flamenco', cursive;
+    color: #081B28;
+    font-size: large;
+    font-weight: bold;
+}
+
+table{
+    border-radius: 10px;
 }

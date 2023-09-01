@@ -128,3 +128,25 @@ $("tripsCont").on('click', '.card', function () {
     // Making sure the image fits 
     $(this).find(".card-img-top").toggleClass("small");
 })
+
+
+
+// TRIP CHECKOUT// 
+// ------------------------------ 
+
+
+
+
+// Removing trip items
+
+$("#del1").click(function () {
+    $("#trip1").remove();
+});
+
+$("#del2").click(function () {
+    $("#trip2").remove();
+});
+
+$("#del3").click(function () {
+    $("#trip3").remove();
+});

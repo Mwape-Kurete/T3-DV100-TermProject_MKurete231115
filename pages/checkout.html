@@ -12,6 +12,100 @@
 </head>
 <body>
 
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" class="">
+                <img src="/assets/icons-and-logos/logo.svg" alt="Logo" width="50" height="50"
+                    class="d-inline-block align-text-top">
+                <h1>Sail Africa</h1>
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="../index.html" class="nav-link px-2 ">Home</a></li>
+                <li><a href="/pages/trips.html" class="nav-link px-2">Trips</a></li>
+                <li><a href="/pages/checkout.html" class="nav-link px-2">Checkout</a></li>
+            </ul>
+
+            <a class="navbar-brand" href="#">
+                <img src="/assets/icons-and-logos/bag-heart-fill.svg" alt="checkout" width="30" height="24"
+                    class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary hero">
+            <div class="col-md-6 p-lg-5 mx-auto my-5">
+                <h1 class="display-3 fw-bold">Sail Africa</h1>
+                <h3 class="fw-normal text-muted mb-3">Explore our trips</h3>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- TRIPS SECTION -->
+    <div class="container mt-5 pt-5 checkout align-content-center">
+
+        <!-- Page Title -->
+        <h2>Here are your current trips </h2>
+  
+        <!-- Checklist section -->
+        <div class="row" id="wishlistContainer">
+          
+          <div class="col-12">
+  
+            <table class="table table-borderless table-hover">
+              <thead>
+                <tr>
+                  <th scope="col" >#</th>
+                  <th scope="col">Trip Stamp</th>
+                  <th scope="col">Trip Name</th>
+                  <th scope="col">Trip Type</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col">Cost</th>
+                  <th scope="col" id="remove">Remove from List</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="trip1" class="wishlist-item">
+                  <th scope="row" class="list-text">1</th>
+                  <td><img src="/assets/Plants/plant2.png" alt="first plant" class="list-img-left"></td>
+                  <td class="list-text">Name</td>
+                  <td class="list-text">Type</td>
+                  <td class="list-text">Duration</td>
+                  <td class="list-text">Cost</td>
+
+                  <td class="list-del" id="del1"><img src="../assets/icons-and-logos/delete_cross.svg" width="24px" class="list-del-img"></td>
+                </tr>
+                <tr id="trip2" class="wishlist-item">
+                  <th scope="row" class="list-text">2</th>
+                  <td><img src="/assets/Plants/plant3.png" alt="second plant" class="list-img-left"></td>
+                  
+                  <td class="list-text">Name</td>
+                  <td class="list-text">Type</td>
+                  <td class="list-text">Duration</td>
+                  <td class="list-text">Cost</td>
+
+                  <td class="list-del" id="del2"><img src="../assets/icons-and-logos/delete_cross.svg" width="24px" class="list-del-img"></td>
+                </tr>
+                <tr id="trip3" class="wishlist-item">
+                  <th scope="row" class="list-text">3</th>
+                  <td><img src="/assets/Plants/plant4.png" alt="third plant" class="list-img-left"></td>
+                  
+                  <td class="list-text">Name</td>
+                  <td class="list-text">Type</td>
+                  <td class="list-text">Duration</td>
+                  <td class="list-text">Cost</td>
+                  
+                  <td class="list-del" id="del3"><img src="../assets/icons-and-logos/delete_cross.svg" width="24px" class="list-del-img"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Purchase Button -->
+        <a class="btn btn-warning purchase" href="#" role="button">Purchase these Trips</a>
+      </div>
 
     <!-- ==============================================================================================================-->
     <!-- Scripting Linkage -->
